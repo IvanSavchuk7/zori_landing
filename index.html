@@ -5,7 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="ZORI - комплекс де відпочиваєш душею. Інвестуй у власний котедж в Карпатах" name="description">
+    <meta content="ZORI - комплекс де відпочиваєш душею" property="og:title">
+    <meta content="ZORI - комплекс де відпочиваєш душею. Інвестуй у власний котедж в Карпатах" property="og:description">
+    <meta content="" property="og:image">
+    <meta content="ZORI - комплекс де відпочиваєш душею" property="twitter:title">
+    <meta content="ZORI - комплекс де відпочиваєш душею. Інвестуй у власний котедж в Карпатах" property="twitter:description">
+    <meta content="" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/favicon-128x128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>ZORI - комплекс де відпочиваєш душею</title>
 </head>
 <body>
@@ -30,7 +60,7 @@
                 <div>власний котедж </div>
                 <div>в Карпатах</div>
             </div>
-            <a href="" class="offer-button">
+            <a href="#form" class="offer-button">
                 <span>деталі інвестування</span>
                 <div class="arrow-wrapper">
                     <img src="assets/images/white-arrow.svg" alt="">
@@ -76,7 +106,7 @@
                     залишіть заявку
                 </div>
                 <form class="custom-form" id="form">
-                    <input type="hidden" name="SheetName" value="">
+                    <input type="hidden" name="SheetName" value="Test">
 <!--                    <input type="hidden" name="utm_source">-->
 <!--                    <input type="hidden" name="utm_campaign">-->
 <!--                    <input type="hidden" name="utm_content">-->
@@ -89,26 +119,28 @@
                             <input type="tel" name="Номер телефону" pattern="^(\+?\d{10,15})$" required placeholder="Ваш телефон">
                         </label>
                         <div class="custom-select-wrapper" id="customSelect">
-                            <div class="select-toggle" onclick="toggleDropdown()">ЯКИЙ ВАШ БЮДЖЕТ?</div>
+                            <div class="select-toggle" onclick="toggleDropdown()" id="dropdownLabel">ЯКИЙ ВАШ БЮДЖЕТ?</div>
+                            <input type="hidden" name="budget" id="selectedBudget" required>
                             <div class="select-dropdown">
                                 <label class="custom-radio">
-                                    <input type="radio" name="budget" required>
-                                    <span class="dot"></span> ДО 50 000 $
+                                    <input type="radio" name="Бюджет" value="ДО 50 000$">
+                                    <span class="dot"></span> ДО 50 000$
                                 </label>
                                 <label class="custom-radio">
-                                    <input type="radio" name="budget">
-                                    <span class="dot"></span> 50 000 - 100 000 $
+                                    <input type="radio" name="Бюджет" value="50 000 - 100 000$">
+                                    <span class="dot"></span> 50 000 - 100 000$
                                 </label>
                                 <label class="custom-radio">
-                                    <input type="radio" name="budget">
-                                    <span class="dot"></span> 100 000 - 150 000 $
+                                    <input type="radio" name="Бюджет" value="100 000 - 150 000$">
+                                    <span class="dot"></span> 100 000 - 150 000$
                                 </label>
                                 <label class="custom-radio">
-                                    <input type="radio" name="budget">
-                                    <span class="dot"></span> 150 000 $+
+                                    <input type="radio" name="Бюджет" value="150 000$+">
+                                    <span class="dot"></span> 150 000$+
                                 </label>
                             </div>
                         </div>
+
                     </div>
                     <button class="button pulse" id="submit-btn">
                         <div class="loader">
@@ -136,7 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="fixel-semibold">Отримати пропозицію</span><div class="arrow-wrapper"><img src="assets/images/white-arrow.svg" alt="" class="arrow"></div>
+                        <span class="span">Отримати пропозицію</span><div class="arrow-wrapper"><img src="assets/images/white-arrow.svg" alt="" class="arrow"></div>
                     </button>
                 </form>
             </div>
@@ -147,6 +179,18 @@
         function toggleDropdown() {
             document.getElementById("customSelect").classList.toggle("open");
         }
+
+        const radios = document.querySelectorAll('input[name="Бюджет"]');
+        const hiddenInput = document.getElementById('selectedBudget');
+        const label = document.getElementById('dropdownLabel');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                hiddenInput.value = this.value;
+                label.textContent = this.value;
+                document.getElementById("customSelect").classList.remove("open");
+            });
+        });
     </script>
 </body>
 </html>

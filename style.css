@@ -225,7 +225,7 @@ section.offer form .form-inner {
 section.offer form .button {
     margin-top: 3rem;
     width: 100%;
-    padding: 1rem .8rem 1rem 1.5rem;
+    padding: .9rem .8rem .9rem 1.5rem;
     justify-content: center;
 }
 section.offer form .button span {
@@ -236,6 +236,14 @@ form input::placeholder {
     color: #F9F9F9;
     text-transform: uppercase;
     font-size: .75rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    border: 2px solid #fff !important; /* Your custom border */
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 100000s ease-in-out, color 100000s ease-in-out;
 }
 .select-toggle,
 form input {
@@ -528,8 +536,9 @@ form input {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 90px;
-    height: 103px;
+    width: 50px;
+    height: 31px;
+    padding-top: 5px;
 }
 
 .loader div {
@@ -620,7 +629,6 @@ form input {
         top: 0;
         height: 0;
     }
-    /*   91.6666667%{top:0;height:0%;} */
 }
 
 @keyframes load2 {
@@ -643,7 +651,6 @@ form input {
         bottom: 0;
         height: 0;
     }
-    /*   91.6666667%{bottom:0;height:0%} */
 }
 
 @keyframes load3 {
@@ -666,7 +673,6 @@ form input {
         bottom: 0;
         height: 0;
     }
-    /*   91.6666667%{bottom:0;height:0%;} */
 }
 
 @keyframes load4 {
@@ -690,7 +696,6 @@ form input {
         bottom: 0;
         height: 0;
     }
-    /*   91.6666667%{bottom:0;height:0%;} */
 }
 
 @keyframes load5 {
@@ -713,7 +718,6 @@ form input {
         top: 0;
         height: 0;
     }
-    /*   91.6666667%{top:0;height:0%;} */
 }
 
 @keyframes load6 {
@@ -736,5 +740,4 @@ form input {
         top: 0;
         height: 0;
     }
-    /*   91.6666667%{top:0;height:0%;} */
 }

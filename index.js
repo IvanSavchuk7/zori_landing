@@ -1,22 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    ["utm_source", "utm_campaign", "utm_content", "utm_term"].forEach(param => {
-        const value = urlParams.get(param);
-        if (value) {
-            const hiddenInput = document.querySelector(`input[name="${param}"]`);
-            if (hiddenInput) hiddenInput.value = value;
-        }
-    });
+    // const urlParams = new URLSearchParams(window.location.search);
+    // ["utm_source", "utm_campaign", "utm_content", "utm_term"].forEach(param => {
+    //     const value = urlParams.get(param);
+    //     if (value) {
+    //         const hiddenInput = document.querySelector(`input[name="${param}"]`);
+    //         if (hiddenInput) hiddenInput.value = value;
+    //     }
+    // });
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         const submitBtn = document.getElementById("submit-btn");
         submitBtn.disabled = true; //
         const loader = submitBtn.querySelector(".loader");
-        const text = submitBtn.querySelector("span");
-        const arrowOuter = submitBtn.querySelector(".arrow");
+        const text = submitBtn.querySelector(".span");
+        const arrowOuter = submitBtn.querySelector(".arrow-wrapper");
+        const arrowInner = submitBtn.querySelector(".arrow-wrapper > img");
         arrowOuter.style.display = "none";
         text.style.display = "none";
         submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "";
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        fetch("", {
+        fetch("https://script.google.com/macros/s/AKfycbxS1n-steHG7gayd5p8GjP_FBWqqbts-cRkEYutlC1-_dEe4kb8IaJowvxCsnsCQeGl/exec", {
             method: "POST",
             body: formData
         })
@@ -39,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     arrowOuter.style.background = "none";
 
                     arrowOuter.style.display = "block";
+                    arrowOuter.style.background = "#FFFFFF";
                     loader.style.display = "none";
-                    arrowOuter.src = "assets/images/checkmark.svg";
-                    arrowOuter.style.background = "none";
-                    setTimeout(() => {
-                        window.location.href = "";
-                    }, 1000);
+                    arrowInner.src = "assets/images/checkmark.svg";
+                    // setTimeout(() => {
+                    //     window.location.href = "";
+                    // }, 1000);
                     submitBtn.classList.add("submitted");
                 }
             })
