@@ -319,6 +319,15 @@ form input {
     background: #000;
     border-radius: 50%;
 }
+.select-dropdown label {
+    pointer-events: auto;
+    user-select: none;
+}
+
+.select-dropdown label span,
+.select-dropdown label .text {
+    -webkit-touch-callout: none;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
