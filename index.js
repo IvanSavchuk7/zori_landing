@@ -55,3 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+document.body.classList.add('loading');
+
+window.onload = function () {
+    document.body.style.opacity = '1';
+    document.body.classList.remove('loading');
+};

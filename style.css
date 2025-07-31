@@ -12,6 +12,14 @@ html {
     background: #D6DBBD;
     scroll-behavior: smooth;
 }
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+body.loading {
+    pointer-events: none;
+    overflow: hidden;
+}
 html main {
     overflow: hidden;
 }
