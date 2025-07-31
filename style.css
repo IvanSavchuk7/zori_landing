@@ -235,7 +235,7 @@ section.offer form .button span {
 form input::placeholder {
     color: #F9F9F9;
     text-transform: uppercase;
-    font-size: .75rem;
+    font-size: .9rem;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -256,7 +256,7 @@ form input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: .75rem;
+    font-size: .9rem;
     backdrop-filter: blur(4px);
 }
 .select-toggle::after {
@@ -280,7 +280,7 @@ form input {
     padding: 1rem;
     display: none;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     z-index: 10;
 }
@@ -470,10 +470,11 @@ form input {
     }
     .select-toggle, form input {
         padding: 1.5rem 1rem;
-        font-size: .9rem;
+        font-size: 1.1rem;
     }
-    form input::placeholder {
-        font-size: .9rem;
+    form input::placeholder,
+    .custom-radio {
+        font-size: 1.1rem;
     }
     section.offer .right > .title {
         font-size: 1.5rem;
@@ -507,6 +508,10 @@ form input {
     section.offer > .content {
         align-items: flex-start;
     }
+    .custom-radio .dot {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 @media screen and (max-width: 480px) {
     html {
@@ -533,11 +538,11 @@ form input {
     header > .offer > .offer-button, section.offer .button {
         font-size: 1.5rem;
     }
-    .select-toggle, form input {
-        font-size: 1.15rem;
+    .select-toggle, form input,.custom-radio {
+        font-size: 1.25rem;
     }
     form input::placeholder {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
     section.offer .right > .title {
         font-size: 2rem;
@@ -565,14 +570,14 @@ form input {
     align-items: center;
     position: relative;
     width: 40px;
-    height: 26px;
+    height: 31px;
     padding-top: 5px;
 }
 
 .loader div {
     position: absolute;
     width: 40px;
-    height: 26px;
+    height: 31px;
 }
 
 .rot {
