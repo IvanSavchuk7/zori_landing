@@ -602,7 +602,7 @@ form input {
     overflow: visible;
     height: fit-content;
     width: fit-content;
-    padding: 5px;
+    padding: 20px;
     display: none;
     position: absolute;
     top: 50%;
