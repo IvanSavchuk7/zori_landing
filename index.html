@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>ZORI - комплекс де відпочиваєш душею</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-wrapper">
+                <img src="assets/images/zori-logo.png" alt="ZORI LOGO">
+                <div class="title">
+                    Зорі — комплекс де <br>
+                    відпочиваєш душею
+                </div>
+            </div>
+
+            <div class="icon-wrapper">
+                <a href=""><img src="assets/images/insta-icon.png" alt=""></a>
+                <a href=""><img src="assets/images/phone-icon.png" alt=""></a>
+            </div>
+        </nav>
+        <div class="offer">
+            <div class="text">
+                <div>Інвестуй у</div>
+                <div>власний котедж </div>
+                <div>в Карпатах</div>
+            </div>
+            <a href="" class="offer-button">
+                <span>деталі інвестування</span>
+                <div class="arrow-wrapper">
+                    <img src="assets/images/white-arrow.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="cottage-wrapper">
+            <div class="container">
+                <div class="grid-1">
+                    <img src="assets/images/grid-1.png" alt="">
+                </div>
+                <div class="grid-2">
+                    <img src="assets/images/grid-2.png" alt="">
+                </div>
+                <div class="grid-3">
+                    <img src="assets/images/grid-3.png" alt="">
+                </div>
+                <div class="grid-4">
+                    <img src="assets/images/grid-4.png" alt="">
+                    <img src="assets/images/grid-4-mobile.png" alt="" class="mobile">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="offer">
+        <div class="content">
+            <div class="left">
+                <div class="arrow-wrapper">
+                    <img src="assets/images/black-arrow.svg" alt="">
+                </div>
+                <div class="text">
+                    <div>Отримати</div>
+                    <div>найвигідніші</div>
+                    <div>пропозиції</div>
+                    <div>для інвестицій</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="logo-wrapper">
+                    <img src="assets/images/zori-logo.png" alt="">
+                </div>
+                <div class="title">
+                    залишіть заявку
+                </div>
+                <form class="custom-form" id="form">
+                    <input type="hidden" name="SheetName" value="">
+<!--                    <input type="hidden" name="utm_source">-->
+<!--                    <input type="hidden" name="utm_campaign">-->
+<!--                    <input type="hidden" name="utm_content">-->
+<!--                    <input type="hidden" name="utm_term">-->
+                    <div class="form-inner">
+                        <label>
+                            <input type="text" name="Імʼя" required placeholder="Ваше Імʼя">
+                        </label>
+                        <label>
+                            <input type="tel" name="Номер телефону" pattern="^(\+?\d{10,15})$" required placeholder="Ваш телефон">
+                        </label>
+                        <div class="custom-select-wrapper" id="customSelect">
+                            <div class="select-toggle" onclick="toggleDropdown()">ЯКИЙ ВАШ БЮДЖЕТ?</div>
+                            <div class="select-dropdown">
+                                <label class="custom-radio">
+                                    <input type="radio" name="budget" required>
+                                    <span class="dot"></span> ДО 50 000 $
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="budget">
+                                    <span class="dot"></span> 50 000 - 100 000 $
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="budget">
+                                    <span class="dot"></span> 100 000 - 150 000 $
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="budget">
+                                    <span class="dot"></span> 150 000 $+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button pulse" id="submit-btn">
+                        <div class="loader">
+                            <div>
+                                <div>
+                                    <span class="one h6"></span>
+                                    <span class="two h3"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <span class="one h1"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <span class="two h2"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <span class="one h4"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="fixel-semibold">Отримати пропозицію</span><div class="arrow-wrapper"><img src="assets/images/white-arrow.svg" alt="" class="arrow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("customSelect").classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
