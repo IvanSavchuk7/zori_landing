@@ -488,6 +488,9 @@ form input {
     header > nav > .logo-wrapper > .title {
         font-size: 1.5rem;
     }
+    section.offer form .button span {
+        font-size: 1.5rem;
+    }
 }
 @media screen and (max-width: 600px) {
     header > .cottage-wrapper > .container {
@@ -515,8 +518,15 @@ form input {
         width: 1.5rem;
         height: 1.5rem;
     }
+    .custom-radio input[type="radio"]:checked + .dot::before {
+        width: .6rem;
+        height: .6rem;
+    }
     .select-dropdown {
         gap: 2rem;
+    }
+    section.offer form .button span {
+        font-size: 1.75rem;
     }
 }
 @media screen and (max-width: 480px) {
