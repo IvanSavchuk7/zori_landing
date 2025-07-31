@@ -431,6 +431,9 @@ form input {
     section.offer form .button {
         padding: .75rem .8rem .75rem 1.5rem;
     }
+    .select-dropdown {
+        gap: 1.5rem;
+    }
 }
 @media screen and (max-width: 789px) {
     html {
@@ -470,11 +473,11 @@ form input {
     }
     .select-toggle, form input {
         padding: 1.5rem 1rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     form input::placeholder,
     .custom-radio {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     section.offer .right > .title {
         font-size: 1.5rem;
@@ -512,6 +515,9 @@ form input {
         width: 1.5rem;
         height: 1.5rem;
     }
+    .select-dropdown {
+        gap: 2rem;
+    }
 }
 @media screen and (max-width: 480px) {
     html {
@@ -539,10 +545,10 @@ form input {
         font-size: 1.5rem;
     }
     .select-toggle, form input,.custom-radio {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     form input::placeholder {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     section.offer .right > .title {
         font-size: 2rem;
