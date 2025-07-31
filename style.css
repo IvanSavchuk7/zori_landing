@@ -555,10 +555,10 @@ form input {
         font-size: 1.5rem;
     }
     .select-toggle, form input,.custom-radio {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
     form input::placeholder {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
     section.offer .right > .title {
         font-size: 2rem;
